@@ -1,1 +1,7 @@
-export const PATH_DB = './src/db/db.json'; // підключаємо константу PATH_DB зі значенням './src/db/db.json' для доступу до файлу db.json в папці src імпортуємо функцію createFakeContact зі значенням '../utils/createFakeContact.js'
+import path from 'path'; // імпортуємо path бібліотеку для роботи з шляхами
+
+//Перший варіант шляху до JSON-файлу
+export const PATH_DB = path.join(process.cwd(), 'src', 'db', 'db.json'); // Шлях до JSON-файлу для зберігання контактів відносно поточного каталогу
+
+// Другий варіант шляху до JSON-файлу
+// export const PATH_DB = path.resolve(process.cwd(), 'src', 'db', 'db.json'); // Шлях до JSON-файлу для зберігання контактів відносно поточного каталогу
