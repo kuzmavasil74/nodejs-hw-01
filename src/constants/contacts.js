@@ -1,1 +1,1 @@
-export const PATH_DB = './src/db/db.json';
+export const PATH_DB = './src/db/db.json'; // підключаємо константу PATH_DB зі значенням './src/db/db.json' для доступу до файлу db.json в папці src імпортуємо функцію createFakeContact зі значенням '../utils/createFakeContact.js'
