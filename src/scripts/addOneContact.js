@@ -10,7 +10,7 @@ export const addOneContact = async () => {
     let contacts = []; // змінна contacts для зберігання контактів
     try {
       const data = await fs.readFile(PATH_DB, 'utf-8'); // читаємо дані з файлу db.json у змінну data та перетворюємо в рядоки UTF-8 якщо він є
-      contacts = JSON.parse(data);
+      contacts = JSON.parse(data); // перетворюємо JSON-дані в масив об'єктів contacts
     } catch (error) {
       // якщо помилка відбувається, то виводимо повідомлення про помилку та вихід з функції addOneContact
       if (error.code !== 'ENOENT') {
